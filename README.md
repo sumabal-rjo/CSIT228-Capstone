@@ -30,4 +30,4 @@ A Java desktop application that helps small businesses efficiently track and man
 - UML: Use Case Diagram and Class Diagram included in /diagrams/
 - Singleton pattern applied to DatabaseConnection
 - Database: JDBC integration planned for full CRUD on products and transactions
-- Multithreading: Planned for background stock monitoring via LowStockAlert
+- Multithreading: Planned for background stock monitoring via LowStockAlert better.
