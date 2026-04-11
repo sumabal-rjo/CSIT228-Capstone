@@ -22,7 +22,7 @@ A Java desktop application that helps small businesses efficiently track and man
 - Java
 - JavaFX
 - JDBC
-- Database (SQLite)
+- Database (SQLite/ MySQL)
 
 ## Evaluation Criteria Mapping (Initial)
 - OOP: Classes include Product, Inventory, User, Transaction, Report, LowStockAlert, DatabaseConnection
@@ -30,4 +30,4 @@ A Java desktop application that helps small businesses efficiently track and man
 - UML: Use Case Diagram and Class Diagram included in /diagrams/
 - Design Pattern: Singleton pattern applied to DatabaseConnection
 - Database: JDBC integration planned for full CRUD on products and transactions
-- Multithreading: Planned for background stock monitoring via LowStockAlert better.
+- Multithreading: Planned for background stock monitoring via LowStockAlert 
