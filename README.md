@@ -28,6 +28,6 @@ A Java desktop application that helps small businesses efficiently track and man
 - OOP: Classes include Product, Inventory, User, Transaction, Report, LowStockAlert, DatabaseConnection
 - GUI: JavaFX with FXML — MainView.fxml, AddProductView.fxml
 - UML: Use Case Diagram and Class Diagram included in /diagrams/
-- Singleton pattern applied to DatabaseConnection
+- Design Pattern: Singleton pattern applied to DatabaseConnection
 - Database: JDBC integration planned for full CRUD on products and transactions
 - Multithreading: Planned for background stock monitoring via LowStockAlert better.
