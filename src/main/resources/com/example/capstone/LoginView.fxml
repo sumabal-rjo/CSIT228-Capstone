@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.example.capstone.controller.LoginController"
+           style="-fx-background-color: #0E0F11;">
+
+    <VBox spacing="0" alignment="CENTER" maxWidth="400">
+        <VBox alignment="CENTER" spacing="8" style="-fx-padding: 0 0 32 0;">
+            <HBox alignment="CENTER" spacing="10">
+                <Region style="-fx-background-color: #6EE7B7; -fx-background-radius: 50; -fx-min-width: 14; -fx-min-height: 14;"/>
+                <Label text="CoreStock"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #F5F4F0;"/>
+            </HBox>
+
+            <Label text="Smart Inventory Management System"
+                   style="-fx-font-size: 11px; -fx-text-fill: #4A5568;"/>
+        </VBox>
+
+        <VBox spacing="18"
+              style="-fx-background-color: #111214; -fx-padding: 32; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.07); -fx-border-width: 0.5; -fx-border-radius: 10;">
+            <Label text="Sign In"
+                   style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #F5F4F0;"/>
+
+            <VBox spacing="6">
+                <Label text="USERNAME"
+                       style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <TextField fx:id="usernameField"
+                           promptText="Enter your username"
+                           style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 10 14; -fx-font-size: 13px;"/>
+            </VBox>
+
+            <VBox spacing="6">
+                <Label text="PASSWORD"
+                       style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <PasswordField fx:id="passwordField"
+                               promptText="Enter your password"
+                               style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 10 14; -fx-font-size: 13px;"/>
+            </VBox>
+
+            <VBox spacing="8">
+                <Label text="LOGIN AS"
+                       style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <HBox spacing="24" alignment="CENTER_LEFT">
+                    <fx:define>
+                        <ToggleGroup fx:id="roleGroup"/>
+                    </fx:define>
+                    <RadioButton fx:id="adminRadio"
+                                 text="Admin"
+                                 toggleGroup="$roleGroup"
+                                 selected="true"
+                                 style="-fx-text-fill: #F5F4F0; -fx-font-size: 13px;"/>
+                    <RadioButton text="Staff"
+                                 toggleGroup="$roleGroup"
+                                 style="-fx-text-fill: #F5F4F0; -fx-font-size: 13px;"/>
+                </HBox>
+            </VBox>
+
+            <Label fx:id="loginMessageLabel"
+                   text=""
+                   wrapText="true"
+                   style="-fx-text-fill: #E53E3E; -fx-font-size: 11px;"/>
+
+            <VBox spacing="8">
+                <Button text="Sign In"
+                        onAction="#onLogin"
+                        maxWidth="Infinity"
+                        style="-fx-background-color: #6EE7B7; -fx-text-fill: #0E0F11; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 12; -fx-background-radius: 6; -fx-cursor: hand;"/>
+                <Button text="Clear"
+                        onAction="#onClearLogin"
+                        maxWidth="Infinity"
+                        style="-fx-background-color: transparent; -fx-text-fill: #4A5568; -fx-font-size: 12px; -fx-padding: 8; -fx-background-radius: 6; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-cursor: hand;"/>
+                <Button text="Create Account"
+                        onAction="#onCreateAccountLink"
+                        maxWidth="Infinity"
+                        style="-fx-background-color: transparent; -fx-text-fill: #6EE7B7; -fx-font-size: 12px; -fx-padding: 8; -fx-background-radius: 6; -fx-border-color: rgba(110,231,183,0.45); -fx-border-radius: 6; -fx-cursor: hand;"/>
+            </VBox>
+        </VBox>
+    </VBox>
+</StackPane>
