@@ -246,24 +246,24 @@ public class MainController {
         String role = admin ? "Admin" : "Staff";
         roleLabel.setText(role + " Access");
         companyLabel.setText(getCompanyDisplayName());
-
-        addProductButton.setVisible(admin);
-        addProductButton.setManaged(admin);
-        editProductButton.setVisible(admin);
-        editProductButton.setManaged(admin);
+        addProductButton.setVisible(true);
+        addProductButton.setManaged(true);
+        editProductButton.setVisible(true);
+        editProductButton.setManaged(true);
         deleteProductButton.setVisible(admin);
         deleteProductButton.setManaged(admin);
-        increaseStockButton.setVisible(admin);
-        increaseStockButton.setManaged(admin);
-        decreaseStockButton.setVisible(admin);
-        decreaseStockButton.setManaged(admin);
+        increaseStockButton.setVisible(true);
+        increaseStockButton.setManaged(true);
+        decreaseStockButton.setVisible(true);
+        decreaseStockButton.setManaged(true);
         reportButton.setVisible(admin);
         reportButton.setManaged(admin);
+        navLogs.setVisible(admin);
+        navLogs.setManaged(admin);
         navCategories.setVisible(admin);
         navCategories.setManaged(admin);
         navSuppliers.setVisible(admin);
         navSuppliers.setManaged(admin);
-
         fillProfile();
     }
 
@@ -351,7 +351,20 @@ public class MainController {
     @FXML public void showProducts() { showPane(productsPane, navProducts); }
     @FXML public void showLowStock() { lowStockList.setAll(productDAO.getLowStock()); showPane(lowStockPane, navLowStock); }
     @FXML public void showSales() { saleList.setAll(saleDAO.getSoldItems()); showPane(salesPane, navSales); }
-    @FXML public void showLogs() { logList.setAll(inventoryLogDAO.getAll()); showPane(logsPane, navLogs); }
+    @FXML public void showLogs() {
+        if (!canViewAdminOnlyPages()) {
+            showAlert("Inventory logs are only available to Admin users.");
+            showProducts();
+            return;
+        }
+        logList.setAll(inventoryLogDAO.getAll());
+        showPane(logsPane, navLogs);
+    }
+
+    private boolean canViewAdminOnlyPages() {
+        return !SessionManager.getInstance().isLoggedIn() || SessionManager.getInstance().isAdmin();
+    }
+
     @FXML public void showCategories() { categoryList.setAll(categoryDAO.getAll()); showPane(categoriesPane, navCategories); }
     @FXML public void showSuppliers() { supplierList.setAll(supplierDAO.getAll()); showPane(suppliersPane, navSuppliers); }
     @FXML public void showProfile() { fillProfile(); showPane(profilePane, navProfile); }
@@ -772,3 +785,4 @@ public class MainController {
         double totalValue;
     }
 }
+ 
