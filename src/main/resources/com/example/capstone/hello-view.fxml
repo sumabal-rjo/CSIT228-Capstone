@@ -6,32 +6,33 @@
 <BorderPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.capstone.controller.MainController"
-            style="-fx-background-color: #0B1117;">
+            stylesheets="@theme.css"
+            style="-fx-background-color: #FFFDF8;">
 
     <top>
         <HBox alignment="CENTER_LEFT" spacing="12"
-              style="-fx-background-color: #102033; -fx-padding: 14 22; -fx-border-color: #1D334B; -fx-border-width: 0 0 1 0;">
+              style="-fx-background-color: #7A1E2C; -fx-padding: 14 22; -fx-border-color: #D4A017; -fx-border-width: 0 0 2 0;">
             <Label text="CoreStock"
-                   style="-fx-text-fill: #6EE7B7; -fx-font-size: 22; -fx-font-weight: bold;"/>
+                   style="-fx-text-fill: #F6D36B; -fx-font-size: 22; -fx-font-weight: bold;"/>
             <Label text="Smart Inventory Management"
-                   style="-fx-text-fill: #D9E6F2; -fx-font-size: 13;"/>
-            <Label text="|" style="-fx-text-fill: #314256;"/>
+                   style="-fx-text-fill: #FFFDF8; -fx-font-size: 13;"/>
+            <Label text="|" style="-fx-text-fill: #D4A017;"/>
             <Label fx:id="companyLabel" text="Company"
-                   style="-fx-text-fill: #F5F7FA; -fx-font-size: 13; -fx-font-weight: bold;"/>
+                   style="-fx-text-fill: #FFFFFF; -fx-font-size: 13; -fx-font-weight: bold;"/>
             <Region HBox.hgrow="ALWAYS"/>
             <Label fx:id="roleLabel" text="Admin Access"
-                   style="-fx-text-fill: #8FA3B8; -fx-font-size: 12;"/>
+                   style="-fx-text-fill: #F6E9C8; -fx-font-size: 12;"/>
             <Button fx:id="reportButton" text="Generate Report" onAction="#onGenerateReport"
-                    style="-fx-background-color: #6EE7B7; -fx-text-fill: #062016; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 8 14;"/>
+                    style="-fx-background-color: #D4A017; -fx-text-fill: #2B1B1F; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 8 14;"/>
             <Button text="Logout" onAction="#onLogout"
-                    style="-fx-background-color: transparent; -fx-text-fill: #D9E6F2; -fx-border-color: #314256; -fx-border-radius: 8; -fx-padding: 8 14;"/>
+                    style="-fx-background-color: transparent; -fx-text-fill: #FFFDF8; -fx-border-color: #D4A017; -fx-border-radius: 8; -fx-padding: 8 14;"/>
         </HBox>
     </top>
 
     <left>
         <VBox spacing="6"
-              style="-fx-background-color: #0F1A26; -fx-padding: 18 12; -fx-min-width: 190; -fx-border-color: #1D334B; -fx-border-width: 0 1 0 0;">
-            <Label text="MENU" style="-fx-text-fill: #6EE7B7; -fx-font-size: 11; -fx-font-weight: bold; -fx-padding: 0 0 8 8;"/>
+              style="-fx-background-color: #7A1E2C; -fx-padding: 18 12; -fx-min-width: 190; -fx-border-color: #D4A017; -fx-border-width: 0 2 0 0;">
+            <Label text="MENU" style="-fx-text-fill: #F6D36B; -fx-font-size: 11; -fx-font-weight: bold; -fx-padding: 0 0 8 8;"/>
             <Button fx:id="navProducts" text="Products" maxWidth="Infinity" onAction="#showProducts"/>
             <Button fx:id="navLowStock" text="Low Stock Alerts" maxWidth="Infinity" onAction="#showLowStock"/>
             <Button fx:id="navSales" text="Sales / Sold Items" maxWidth="Infinity" onAction="#showSales"/>
@@ -48,8 +49,8 @@
             <VBox fx:id="productsPane" spacing="16">
                 <HBox alignment="CENTER_LEFT" spacing="12">
                     <VBox spacing="2">
-                        <Label text="Products" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
-                        <Label text="Search, filter, view inventory, and manage stock." style="-fx-text-fill: #8FA3B8;"/>
+                        <Label text="Products" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                        <Label text="Search, filter, view inventory, and manage stock." style="-fx-text-fill: #6F5A5D;"/>
                     </VBox>
                     <Region HBox.hgrow="ALWAYS"/>
                     <TextField fx:id="searchField" promptText="Search products" prefWidth="220"/>
@@ -59,17 +60,17 @@
                 </HBox>
 
                 <HBox spacing="12">
-                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #102033; -fx-padding: 14; -fx-background-radius: 8;">
-                        <Label text="TOTAL SKUS" style="-fx-text-fill: #8FA3B8; -fx-font-size: 10;"/>
-                        <Label fx:id="statSkuLabel" text="0" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #FFFFFF; -fx-padding: 14; -fx-background-radius: 8; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 8;">
+                        <Label text="TOTAL SKUS" style="-fx-text-fill: #6F5A5D; -fx-font-size: 10;"/>
+                        <Label fx:id="statSkuLabel" text="0" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                     </VBox>
-                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #102033; -fx-padding: 14; -fx-background-radius: 8;">
-                        <Label text="TOTAL VALUE" style="-fx-text-fill: #8FA3B8; -fx-font-size: 10;"/>
-                        <Label fx:id="statValueLabel" text="P 0.00" style="-fx-text-fill: #6EE7B7; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #FFFFFF; -fx-padding: 14; -fx-background-radius: 8; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 8;">
+                        <Label text="TOTAL VALUE" style="-fx-text-fill: #6F5A5D; -fx-font-size: 10;"/>
+                        <Label fx:id="statValueLabel" text="P 0.00" style="-fx-text-fill: #7A1E2C; -fx-font-size: 24; -fx-font-weight: bold;"/>
                     </VBox>
-                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #102033; -fx-padding: 14; -fx-background-radius: 8;">
-                        <Label text="LOW STOCK" style="-fx-text-fill: #8FA3B8; -fx-font-size: 10;"/>
-                        <Label fx:id="statLowLabel" text="0" style="-fx-text-fill: #EF9F27; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                    <VBox HBox.hgrow="ALWAYS" style="-fx-background-color: #FFFFFF; -fx-padding: 14; -fx-background-radius: 8; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 8;">
+                        <Label text="LOW STOCK" style="-fx-text-fill: #6F5A5D; -fx-font-size: 10;"/>
+                        <Label fx:id="statLowLabel" text="0" style="-fx-text-fill: #D4A017; -fx-font-size: 24; -fx-font-weight: bold;"/>
                     </VBox>
                 </HBox>
 
@@ -88,7 +89,7 @@
                     <Button fx:id="addProductButton" text="Add Product" onAction="#onAddProduct"/>
                     <Button fx:id="editProductButton" text="Edit" onAction="#onEditProduct"/>
                     <Button fx:id="deleteProductButton" text="Delete" onAction="#onDeleteProduct"/>
-                    <Label fx:id="selectedStockLabel" text="Selected Stock: --" style="-fx-text-fill: #8FA3B8; -fx-padding: 0 10;"/>
+                    <Label fx:id="selectedStockLabel" text="Selected Stock: --" style="-fx-text-fill: #6F5A5D; -fx-padding: 0 10;"/>
                     <TextField fx:id="stockAmountField" promptText="Amount" prefWidth="80"/>
                     <Button fx:id="decreaseStockButton" text="- Stock" onAction="#onDecreaseStock"/>
                     <Button fx:id="increaseStockButton" text="+ Stock" onAction="#onIncreaseStock"/>
@@ -96,7 +97,7 @@
             </VBox>
 
             <VBox fx:id="lowStockPane" spacing="16" visible="false" managed="false">
-                <Label text="Low Stock Alerts" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label text="Low Stock Alerts" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                 <TableView fx:id="lowStockTable" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="lowIdColumn" text="ID" prefWidth="70"/>
@@ -110,12 +111,12 @@
 
             <VBox fx:id="salesPane" spacing="16" visible="false" managed="false">
                 <HBox alignment="CENTER_LEFT" spacing="10">
-                    <Label text="Sales / Sold Items" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                    <Label text="Sales / Sold Items" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                     <Region HBox.hgrow="ALWAYS"/>
                     <ComboBox fx:id="saleProductCombo" promptText="Product" prefWidth="220"/>
                     <TextField fx:id="saleQuantityField" promptText="Qty" prefWidth="70"/>
                     <TextField fx:id="saleNoteField" promptText="Note" prefWidth="170"/>
-                    <Label fx:id="saleTotalLabel" text="Total: P 0.00" style="-fx-text-fill: #6EE7B7; -fx-font-weight: bold;"/>
+                    <Label fx:id="saleTotalLabel" text="Total: P 0.00" style="-fx-text-fill: #7A1E2C; -fx-font-weight: bold;"/>
                     <Button text="Record Sale" onAction="#onRecordSale"/>
                 </HBox>
                 <TableView fx:id="salesTable" VBox.vgrow="ALWAYS">
@@ -132,7 +133,7 @@
             </VBox>
 
             <VBox fx:id="logsPane" spacing="16" visible="false" managed="false">
-                <Label text="Inventory Logs" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label text="Inventory Logs" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                 <TableView fx:id="logsTable" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="logIdColumn" text="Log ID" prefWidth="70"/>
@@ -149,7 +150,7 @@
             </VBox>
 
             <VBox fx:id="categoriesPane" spacing="16" visible="false" managed="false">
-                <Label text="Categories" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label text="Categories" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                 <TableView fx:id="categoryTable" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="catIdColumn" text="ID" prefWidth="70"/>
@@ -165,7 +166,7 @@
             </VBox>
 
             <VBox fx:id="suppliersPane" spacing="16" visible="false" managed="false">
-                <Label text="Suppliers" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label text="Suppliers" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
                 <TableView fx:id="supplierTable" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="supIdColumn" text="ID" prefWidth="60"/>
@@ -184,24 +185,24 @@
             </VBox>
 
             <VBox fx:id="profilePane" spacing="14" visible="false" managed="false" maxWidth="520" StackPane.alignment="TOP_LEFT">
-                <Label text="Edit Profile" style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
-                <Label text="Full Name" style="-fx-text-fill: #8FA3B8;"/>
+                <Label text="Edit Profile" style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
+                <Label text="Full Name" style="-fx-text-fill: #6F5A5D;"/>
                 <TextField fx:id="profileNameField"/>
-                <Label text="Company Name" style="-fx-text-fill: #8FA3B8;"/>
+                <Label text="Company Name" style="-fx-text-fill: #6F5A5D;"/>
                 <TextField fx:id="profileCompanyField"/>
-                <Label text="Email" style="-fx-text-fill: #8FA3B8;"/>
+                <Label text="Email" style="-fx-text-fill: #6F5A5D;"/>
                 <TextField fx:id="profileEmailField"/>
-                <Label text="Username" style="-fx-text-fill: #8FA3B8;"/>
+                <Label text="Username" style="-fx-text-fill: #6F5A5D;"/>
                 <TextField fx:id="profileUsernameField"/>
-                <Label text="Password" style="-fx-text-fill: #8FA3B8;"/>
+                <Label text="Password" style="-fx-text-fill: #6F5A5D;"/>
                 <TextField fx:id="profilePasswordField" promptText="Leave blank to keep current password"/>
                 <HBox spacing="8">
-                    <Label text="Role:" style="-fx-text-fill: #8FA3B8;"/>
-                    <Label fx:id="profileRoleLabel" text="admin" style="-fx-text-fill: #6EE7B7; -fx-font-weight: bold;"/>
+                    <Label text="Role:" style="-fx-text-fill: #6F5A5D;"/>
+                    <Label fx:id="profileRoleLabel" text="admin" style="-fx-text-fill: #7A1E2C; -fx-font-weight: bold;"/>
                 </HBox>
                 <Button text="Save Profile" onAction="#onSaveProfile"/>
                 <Button text="Delete Account" onAction="#onDeleteAccount"
-                        style="-fx-background-color: transparent; -fx-text-fill: #F09595; -fx-border-color: rgba(240,149,149,0.35); -fx-border-radius: 8; -fx-padding: 10 14;"/>
+                        style="-fx-background-color: transparent; -fx-text-fill: #B42318; -fx-border-color: rgba(180,35,24,0.35); -fx-border-radius: 8; -fx-padding: 10 14;"/>
             </VBox>
         </StackPane>
     </center>
