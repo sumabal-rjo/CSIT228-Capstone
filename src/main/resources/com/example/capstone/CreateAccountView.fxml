@@ -6,69 +6,70 @@
 <StackPane xmlns="http://javafx.com/javafx"
            xmlns:fx="http://javafx.com/fxml"
            fx:controller="com.example.capstone.controller.CreateAccountController"
-           style="-fx-background-color: #0E0F11; -fx-padding: 34;">
+           stylesheets="@theme.css"
+           style="-fx-background-color: #FFFDF8; -fx-padding: 34;">
 
     <VBox spacing="0" alignment="CENTER" maxWidth="420">
         <VBox alignment="CENTER" spacing="8" style="-fx-padding: 0 0 26 0;">
             <HBox alignment="CENTER" spacing="10">
-                <Region style="-fx-background-color: #6EE7B7; -fx-background-radius: 50; -fx-min-width: 14; -fx-min-height: 14;"/>
+                <Region style="-fx-background-color: #7A1E2C; -fx-background-radius: 50; -fx-min-width: 14; -fx-min-height: 14;"/>
                 <Label text="CoreStock"
-                       style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #F5F4F0;"/>
+                       style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2B1B1F;"/>
             </HBox>
             <Label text="Smart Inventory Management System"
-                   style="-fx-font-size: 11px; -fx-text-fill: #4A5568;"/>
+                   style="-fx-font-size: 11px; -fx-text-fill: #6F5A5D;"/>
         </VBox>
 
         <VBox spacing="13"
-              style="-fx-background-color: #111214; -fx-padding: 30; -fx-background-radius: 10; -fx-border-color: rgba(255,255,255,0.07); -fx-border-width: 0.5; -fx-border-radius: 10;">
+              style="-fx-background-color: #FFFFFF; -fx-padding: 30; -fx-background-radius: 10; -fx-border-color: rgba(122,30,44,0.18); -fx-border-width: 0.5; -fx-border-radius: 10;">
             <Label text="Create Account"
-                   style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #F5F4F0;"/>
+                   style="-fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #2B1B1F;"/>
 
             <VBox spacing="5">
-                <Label text="COMPANY NAME" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <Label text="COMPANY NAME" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                 <TextField fx:id="companyNameField" promptText="Example: ABC Trading"
-                           style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
+                           style="-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-prompt-text-fill: #9A8588; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
             </VBox>
 
             <VBox spacing="5">
-                <Label text="FULL NAME" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <Label text="FULL NAME" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                 <TextField fx:id="fullNameField" promptText="Your name"
-                           style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
+                           style="-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-prompt-text-fill: #9A8588; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
             </VBox>
 
             <VBox spacing="5">
-                <Label text="EMAIL" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <Label text="EMAIL" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                 <TextField fx:id="emailField" promptText="name@company.com"
-                           style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
+                           style="-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-prompt-text-fill: #9A8588; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
             </VBox>
 
             <HBox spacing="10">
                 <VBox spacing="5" HBox.hgrow="ALWAYS" prefWidth="0">
-                    <Label text="USERNAME" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                    <Label text="USERNAME" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                     <TextField fx:id="usernameField" promptText="New username"
-                               style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
+                               style="-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-prompt-text-fill: #9A8588; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
                 </VBox>
                 <VBox spacing="5" HBox.hgrow="ALWAYS" prefWidth="0">
-                    <Label text="ROLE" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                    <Label text="ROLE" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                     <ComboBox fx:id="roleCombo" maxWidth="Infinity"
-                              style="-fx-background-color: #1F2937; -fx-text-base-color: #F5F4F0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 8 13;"/>
+                              style="-fx-background-color: #FFF9EC; -fx-text-base-color: #2B1B1F; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 8 13;"/>
                 </VBox>
             </HBox>
 
             <VBox spacing="5">
-                <Label text="PASSWORD" style="-fx-text-fill: #CBD5E0; -fx-font-size: 10px; -fx-font-weight: bold;"/>
+                <Label text="PASSWORD" style="-fx-text-fill: #7A1E2C; -fx-font-size: 10px; -fx-font-weight: bold;"/>
                 <PasswordField fx:id="passwordField" promptText="At least 8 characters"
-                               style="-fx-background-color: #1F2937; -fx-text-fill: #F5F4F0; -fx-prompt-text-fill: #A0AEC0; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
+                               style="-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-prompt-text-fill: #9A8588; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-background-radius: 6; -fx-padding: 9 13;"/>
             </VBox>
 
             <Button text="Create Account"
                     onAction="#onCreateAccount"
                     maxWidth="Infinity"
-                    style="-fx-background-color: #6EE7B7; -fx-text-fill: #0E0F11; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 12; -fx-background-radius: 6; -fx-cursor: hand;"/>
+                    style="-fx-background-color: #7A1E2C; -fx-text-fill: #FFFDF8; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 12; -fx-background-radius: 6; -fx-cursor: hand;"/>
             <Button text="Back to Login"
                     onAction="#onBackToLogin"
                     maxWidth="Infinity"
-                    style="-fx-background-color: transparent; -fx-text-fill: #4A5568; -fx-font-size: 12px; -fx-padding: 8; -fx-background-radius: 6; -fx-border-color: rgba(255,255,255,0.07); -fx-border-radius: 6; -fx-cursor: hand;"/>
+                    style="-fx-background-color: transparent; -fx-text-fill: #6F5A5D; -fx-font-size: 12px; -fx-padding: 8; -fx-background-radius: 6; -fx-border-color: rgba(122,30,44,0.18); -fx-border-radius: 6; -fx-cursor: hand;"/>
         </VBox>
     </VBox>
 </StackPane>
