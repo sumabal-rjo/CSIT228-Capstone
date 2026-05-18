@@ -151,8 +151,8 @@ public class MainController {
     private final ObservableList<Sale> saleList = FXCollections.observableArrayList();
     private final ObservableList<InventoryLog> logList = FXCollections.observableArrayList();
 
-    private static final String ACTIVE_STYLE = "-fx-background-color: rgba(110,231,183,0.14); -fx-background-radius: 8; -fx-text-fill: #6EE7B7; -fx-font-size: 13; -fx-alignment: CENTER_LEFT; -fx-padding: 10 12;";
-    private static final String INACTIVE_STYLE = "-fx-background-color: transparent; -fx-background-radius: 8; -fx-text-fill: #B8C0CC; -fx-font-size: 13; -fx-alignment: CENTER_LEFT; -fx-padding: 10 12;";
+    private static final String ACTIVE_STYLE = "-fx-background-color: #FFFDF8; -fx-background-radius: 8; -fx-text-fill: #7A1E2C; -fx-font-size: 13; -fx-font-weight: bold; -fx-alignment: CENTER_LEFT; -fx-padding: 10 12;";
+    private static final String INACTIVE_STYLE = "-fx-background-color: transparent; -fx-background-radius: 8; -fx-text-fill: #FFFDF8; -fx-font-size: 13; -fx-alignment: CENTER_LEFT; -fx-padding: 10 12;";
 
     @FXML
     public void initialize() {
@@ -220,7 +220,7 @@ public class MainController {
             @Override
             protected void updateItem(Product product, boolean empty) {
                 super.updateItem(product, empty);
-                setStyle(!empty && product != null && product.isLowStock() ? "-fx-background-color: rgba(239,159,39,0.10);" : "");
+                setStyle(!empty && product != null && product.isLowStock() ? "-fx-background-color: rgba(212,160,23,0.16);" : "");
             }
         };
     }
@@ -764,13 +764,13 @@ public class MainController {
 
     private TextField styledField(String value) {
         TextField textField = new TextField(value);
-        textField.setStyle("-fx-background-color: #18202A; -fx-text-fill: #F5F7FA; -fx-border-color: #314256; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 12;");
+        textField.setStyle("-fx-background-color: #FFF9EC; -fx-text-fill: #2B1B1F; -fx-border-color: #D4A017; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 8 12;");
         return textField;
     }
 
     private Label styledLabel(String text) {
         Label label = new Label(text);
-        label.setStyle("-fx-font-size: 11; -fx-text-fill: #8FA3B8;");
+        label.setStyle("-fx-font-size: 11; -fx-text-fill: #6F5A5D;");
         return label;
     }
 
@@ -785,4 +785,3 @@ public class MainController {
         double totalValue;
     }
 }
- 
