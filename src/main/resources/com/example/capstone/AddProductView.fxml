@@ -7,17 +7,18 @@
       xmlns="http://javafx.com/javafx/17"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.capstone.controller.AddProductController"
-      style="-fx-background-color: #0F1A26; -fx-padding: 28; -fx-min-width: 440;">
+      stylesheets="@theme.css"
+      style="-fx-background-color: #FFFDF8; -fx-padding: 28; -fx-min-width: 440;">
 
     <Label text="Add / Edit Product"
-           style="-fx-text-fill: #F5F7FA; -fx-font-size: 24; -fx-font-weight: bold;"/>
+           style="-fx-text-fill: #2B1B1F; -fx-font-size: 24; -fx-font-weight: bold;"/>
     <Label text="Product Details"
-           style="-fx-text-fill: #6EE7B7; -fx-font-size: 12; -fx-font-weight: bold;"/>
+           style="-fx-text-fill: #7A1E2C; -fx-font-size: 12; -fx-font-weight: bold;"/>
 
-    <Label text="Product Name" style="-fx-text-fill: #8FA3B8;"/>
+    <Label text="Product Name" style="-fx-text-fill: #6F5A5D;"/>
     <TextField fx:id="nameField" promptText="Example: Wireless Headphones"/>
 
-    <Label text="Description" style="-fx-text-fill: #8FA3B8;"/>
+    <Label text="Description" style="-fx-text-fill: #6F5A5D;"/>
     <TextField fx:id="descField" promptText="Short product description"/>
 
     <GridPane hgap="12" vgap="8">
@@ -26,8 +27,8 @@
             <ColumnConstraints percentWidth="50"/>
         </columnConstraints>
 
-        <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: #8FA3B8;"/>
-        <Label text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-text-fill: #8FA3B8;"/>
+        <Label text="Category" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: #6F5A5D;"/>
+        <Label text="Supplier" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-text-fill: #6F5A5D;"/>
         <ComboBox fx:id="categoryCombo" promptText="Select category" maxWidth="Infinity" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <ComboBox fx:id="supplierCombo" promptText="Select supplier" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     </GridPane>
@@ -39,9 +40,9 @@
             <ColumnConstraints percentWidth="33"/>
         </columnConstraints>
 
-        <Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: #8FA3B8;"/>
-        <Label text="Quantity" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-text-fill: #8FA3B8;"/>
-        <Label text="Alert Level" GridPane.columnIndex="2" GridPane.rowIndex="0" style="-fx-text-fill: #8FA3B8;"/>
+        <Label text="Price" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-text-fill: #6F5A5D;"/>
+        <Label text="Quantity" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-text-fill: #6F5A5D;"/>
+        <Label text="Alert Level" GridPane.columnIndex="2" GridPane.rowIndex="0" style="-fx-text-fill: #6F5A5D;"/>
         <TextField fx:id="priceField" promptText="0.00" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <TextField fx:id="quantityField" promptText="0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
         <TextField fx:id="thresholdField" promptText="10" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
@@ -49,8 +50,8 @@
 
     <HBox spacing="10" style="-fx-padding: 12 0 0 0;">
         <Button text="Save Product" onAction="#onSave" maxWidth="Infinity" HBox.hgrow="ALWAYS"
-                style="-fx-background-color: #6EE7B7; -fx-text-fill: #062016; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 18;"/>
+                style="-fx-background-color: #7A1E2C; -fx-text-fill: #FFFFFF; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 10 18;"/>
         <Button text="Cancel" onAction="#onCancel"
-                style="-fx-background-color: transparent; -fx-text-fill: #D9E6F2; -fx-border-color: #314256; -fx-border-radius: 8; -fx-padding: 10 18;"/>
+                style="-fx-background-color: transparent; -fx-text-fill: #7A1E2C; -fx-border-color: #D4A017; -fx-border-radius: 8; -fx-padding: 10 18;"/>
     </HBox>
 </VBox>
